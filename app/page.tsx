@@ -118,7 +118,7 @@ function ClientContent({ tools }: { tools: any[] }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
         {tools.map((tool) => {
           const IconComponent = tool.icon
-          const toolKey = tool.key.split('.')[1] as any
+          const toolKey = tool.key.split('.')[1] as keyof typeof t.tools
           const toolInfo = translations[language].tools[toolKey]
           
           return (
